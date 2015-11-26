@@ -1,7 +1,7 @@
 set $mod Mod4
 
-set $left DVI-I-1
-set $right DVI-D-0
+set $left DVI-0
+set $right HDMI-0
 
 set $base00 "#181818"
 set $base01 "#282828"
@@ -161,15 +161,9 @@ workspace 9 output $right
 
 assign [class="^Emacs$"] 2
 assign [class="^Hexchat$"] 8
-assign [class="^nuvolaplayer3"] 7
 assign [class="^Wine$" instance="^YNAB 4.exe$"] 9
-assign [class="^Steam$"] 3
-
-for_window [class="^Steam$"] floating enable
 
 exec emacs
 exec hexchat
 exec --no-startup-id i3-msg 'workspace 1; exec google-chrome-unstable'
-exec nuvolaplayer3
 exec start-ynab
-exec steam
