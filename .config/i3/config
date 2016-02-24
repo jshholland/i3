@@ -132,7 +132,7 @@ hide_edge_borders both
 
 bar {
         position top
-        status_command i3status | myi3status
+        status_command i3status # | myi3status
         tray_output $left
 
         colors {
@@ -161,9 +161,9 @@ workspace 9 output $right
 
 assign [class="^Emacs$"] 2
 assign [class="^Hexchat$"] 8
-assign [class="^Wine$" instance="^YNAB 4.exe$"] 9
+assign [class="^YNAB 4.exe$"] 9
 
 exec emacs
 exec hexchat
-exec --no-startup-id i3-msg 'workspace 1; exec google-chrome-unstable'
-exec start-ynab
+exec --no-startup-id i3-msg 'workspace 1; exec firefox'
+exec ynab4
