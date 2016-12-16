@@ -126,7 +126,6 @@ hide_edge_borders both
 bar {
         position top
         status_command i3status
-        tray_output $left
 
         colors {
                 background $base00
@@ -144,13 +143,6 @@ client.focused_inactive $base01 $base01 $base05
 client.unfocused        $base01 $base01 $base04
 client.urgent           $base08 $base08 $base08
 client.background       $base00
-
-workspace 1 output $left
-workspace 2 output $right
-workspace 3 output $left
-workspace 7 output $right
-workspace 8 output $right
-workspace 9 output $right
 
 assign [class="^Emacs$"] 2
 assign [class="^Hexchat$"] 8
