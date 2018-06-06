@@ -28,7 +28,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 # kill focused window
 bindsym $mod+Shift+q kill
 
-bindsym $mod+d exec rofi -show run
+bindsym $mod+d exec rofi -show combi -combi-modi "run#drun" -modi combi
 bindsym $mod+l exec dm-tool lock
 
 # change focus
@@ -147,10 +147,10 @@ client.background       $base00
 assign [class="^Emacs$"] 2
 assign [class="^Hexchat$"] 8
 assign [class="^Slack$"] 9
-assign [class="^discord$"] 9
+assign [class="^Spotify"] 10
 
 exec emacs
 exec hexchat
 exec --no-startup-id i3-msg 'workspace 1; exec firefox'
 exec slack
-exec discord
+exec spotify
